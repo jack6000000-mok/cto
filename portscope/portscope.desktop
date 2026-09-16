@@ -5,6 +5,6 @@ Comment=PortScope — scan profiler + history over nmap.
 Exec=portscope
 Icon=portscope
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;nmap;
 StartupNotify=true
+Categories=kali-network-service-discovery;kali-discovery;

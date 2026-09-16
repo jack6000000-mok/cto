@@ -5,6 +5,6 @@ Comment=AirAudit — wireless auditor over aircrack-ng.
 Exec=airaudit
 Icon=airaudit
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;aircrack-ng;
 StartupNotify=true
+Categories=kali-wifi;

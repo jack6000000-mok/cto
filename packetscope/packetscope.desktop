@@ -5,6 +5,6 @@ Comment=PacketScope — capture viewer over tshark.
 Exec=packetscope
 Icon=packetscope
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;tshark;
 StartupNotify=true
+Categories=kali-network-sniffing;

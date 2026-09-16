@@ -5,6 +5,6 @@ Comment=InjectProbe — injection tester over sqlmap.
 Exec=injectprobe
 Icon=injectprobe
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;sqlmap;
 StartupNotify=true
+Categories=kali-databases;

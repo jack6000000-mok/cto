@@ -5,6 +5,6 @@ Comment=WebAudit — web server scanner over nikto.
 Exec=webaudit
 Icon=webaudit
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;nikto;
 StartupNotify=true
+Categories=kali-web-scanning;kali-vulnerability-scanning;

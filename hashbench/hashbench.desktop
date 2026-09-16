@@ -5,6 +5,6 @@ Comment=HashBench — hash auditor + benchmarks over hashcat.
 Exec=hashbench
 Icon=hashbench
 Terminal=false
-Categories=System;Security;
 Keywords=pentest;security;hashcat;
 StartupNotify=true
+Categories=kali-password-cracking;
