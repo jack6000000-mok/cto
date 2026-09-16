@@ -1,0 +1,33 @@
+# CTO EMPIRE 👑
+### Pentest tools by oday — Qt6, Kali-first.
+
+| Tool | Version | What |
+|---|---|---|
+| `qt-pentest-game-cpp/` | v1.2.0 | **PENTEST // GLITCH PROTOCOL** — 15-min pentest drill quiz. Wrong answers trigger 3D glitch punishment (tearing, RGB split, window shake). About panel with live Tor + i2pd status probes. Ships `.deb` + Windows CI (`.zip` + NSIS setup) |
+| `qt-pentest-game/` | v1.0 | Original Python/PySide6 prototype of the glitch game |
+| `virsh-manager-prop/` | v0.1.0 | Thin Qt GUI over `virsh`/libvirt: VM list, start / shutdown / force-off, live log console. Ships `.deb` |
+
+## Install (Kali/Debian)
+```bash
+sudo dpkg -i glitch-game_1.2.0_amd64.deb virsh-manager_0.1.0_amd64.deb
+glitch-game      # play the drill
+virsh-manager    # manage VMs (needs libvirt: sudo apt install libvirt-daemon-system)
+```
+
+## Build from source
+```bash
+# GlitchGame
+cmake -S qt-pentest-game-cpp -B build-game && cmake --build build-game -j$(nproc)
+# VirshManager
+cmake -S virsh-manager-prop -B build-virsh && cmake --build build-virsh -j$(nproc)
+```
+Needs: `cmake`, `qt6-base-dev` (Widgets + Network for the game). Windows: open `CMakeLists.txt` in QtCreator (MinGW) — see `windows-README.md`; CI builds `.exe` + installer automatically.
+
+## Docs
+- `qt-pentest-game-cpp/ROADMAP.md` — where the empire goes next
+- `qt-pentest-game-cpp/RELEASE_CHECKLIST.md` — how a release gets cut
+- `qt-pentest-game-cpp/installer/GlitchGame.nsi` — Windows installer script
+
+## License
+All first-party code is **proprietary** — see `LICENSE` in each tool folder (single-device use, no redistribution).
+Qt toolkit components are **not** ours: dynamically linked under GNU (L)GPL by The Qt Company Ltd. — see [qt.io/licensing](https://www.qt.io/licensing).

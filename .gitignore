@@ -1,0 +1,9 @@
+build/
+*.deb
+*.exe
+*.zip
+GlitchGame-*-setup.exe
+__pycache__/
+*.pyc
+.vscode/
+.idea/

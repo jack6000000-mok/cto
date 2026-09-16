@@ -1,0 +1,27 @@
+VIRSHMANAGER PROPRIETARY LICENSE (v1.0)
+
+Copyright (c) 2026 oday. All Rights Reserved.
+
+1. GRANT. You are granted a non-exclusive, non-transferable license to
+   install and use one copy of VirshManager ("Software") on a single device.
+
+2. RESTRICTIONS. You may NOT:
+   a) copy, redistribute, sublicense, rent, lease or lend the Software;
+   b) reverse-engineer, decompile or disassemble the Software, except where
+      such restriction is prohibited by applicable law;
+   c) remove or alter any copyright, trademark or proprietary notices.
+
+3. OWNERSHIP. The Software is licensed, not sold. All title, ownership,
+   copyright and intellectual property rights remain with the licensor.
+
+4. THIRD-PARTY COMPONENTS. This Software dynamically links the Qt toolkit,
+   which remains licensed under its own GNU (L)GPL terms by The Qt Company
+   Ltd. and contributors. Qt source: https://www.qt.io / https://download.qt.io.
+
+5. NO WARRANTY. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+   KIND, EXPRESS OR IMPLIED.
+
+6. TERMINATION. This license terminates automatically on breach.
+   Uninstall and destroy all copies on termination.
+
+Contact: oday@local
