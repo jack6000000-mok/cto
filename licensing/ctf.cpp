@@ -54,6 +54,8 @@ int ctfSolvedCount() {
     return n;
 }
 
+static void showElite(QWidget *parent, const QString &tool);
+
 static void showChallenge(QWidget *parent, const QString &tool) {
     QDialog dlg(parent);
     dlg.setWindowTitle("⚑ hidden challenge — " + tool);
@@ -77,8 +79,85 @@ static void showChallenge(QWidget *parent, const QString &tool) {
             if (f.open(QIODevice::WriteOnly)) f.write("solved");
             QMessageBox::information(&dlg, "⚑", "FLAG ACCEPTED. This tool is yours in spirit. 👑");
             dlg.accept();
+            showElite(parent, tool);
         } else {
             QMessageBox::warning(&dlg, "⚑", "Wrong flag. Dig deeper.");
+        }
+    });
+    dlg.exec();
+}
+
+// ---------- ELITE STAGE: nothing stored, everything computed ----------
+static quint64 fnv(const QByteArray &d) {
+    quint64 h = 1469598103934665603ULL;
+    for (unsigned char c : d) { h ^= c; h *= 1099511628211ULL; }
+    return h;
+}
+// Salt is in the open. The work is tracing the rounds, not finding a string.
+QString eliteFor(const QString &tool) {
+    QByteArray d = tool.toUtf8() + "|ELITE|glitch-throne-7";
+    quint64 h = fnv(d);
+    for (int r = 0; r < 3; r++) {
+        QByteArray e = QByteArray::number(h, 16) + ":" + QByteArray::number(r);
+        h = fnv(e) ^ (h << 13) ^ (h >> 7);
+    }
+    return QString("CTO-E{%1}").arg(h & 0xffffffff, 8, 16, QChar('0'));
+}
+static bool traced() {
+    QFile f("/proc/self/status");
+    if (!f.open(QIODevice::ReadOnly)) return false;
+    for (QByteArray line = f.readLine(); !line.isEmpty(); line = f.readLine()) {
+        if (line.startsWith("TracerPid:")) {
+            bool ok = false;
+            return line.mid(10).trimmed().toInt(&ok) != 0 && ok;
+        }
+    }
+    return false;
+}
+static QString eliteMark(const QString &tool) {
+    QString d = QDir::home().filePath(".config/cto-empire");
+    QDir().mkpath(d);
+    return d + "/ctf_" + tool + ".elite";
+}
+
+bool ctfElite(const QString &tool) { return QFile::exists(eliteMark(tool)); }
+int ctfEliteCount() {
+    int n = 0;
+    for (int i = 0; i < kFlagCount; i++)
+        if (ctfElite(kFlags[i].tool)) n++;
+    return n;
+}
+
+static void showElite(QWidget *parent, const QString &tool) {
+    if (traced()) {
+        QMessageBox::warning(parent, "⚑ ELITE",
+            "Tracer detected. The elite gate does not open while watched.\n"
+            "Unhook the watcher — the way elites do — and return.");
+        return;
+    }
+    QDialog dlg(parent);
+    dlg.setWindowTitle("⚑ ELITE — " + tool);
+    dlg.resize(440, 220);
+    auto *lay = new QVBoxLayout(&dlg);
+    auto *info = new QLabel(
+        QString("Stage one was storage. <b>This stage is computation.</b><br><br>"
+                "No flag bytes exist anywhere in this binary — the answer is "
+                "<i>derived</i> at runtime from the tool's true name, three folding "
+                "rounds deep. Trace the derivation. Reimplement it. "
+                "Format: <tt>CTO-E{........}</tt>"));
+    info->setWordWrap(true);
+    auto *edit = new QLineEdit();
+    edit->setPlaceholderText("CTO-E{...}");
+    auto *bGo = new QPushButton("Submit elite flag");
+    lay->addWidget(info); lay->addWidget(edit); lay->addWidget(bGo);
+    QObject::connect(bGo, &QPushButton::clicked, [&] {
+        if (edit->text().trimmed() == eliteFor(tool)) {
+            QFile f(eliteMark(tool));
+            if (f.open(QIODevice::WriteOnly)) f.write("elite");
+            QMessageBox::information(&dlg, "⚑ ELITE", "ELITE ACCEPTED. You reverse like royalty. 👑👑");
+            dlg.accept();
+        } else {
+            QMessageBox::warning(&dlg, "⚑ ELITE", "Wrong. Watch the folds, not the strings.");
         }
     });
     dlg.exec();

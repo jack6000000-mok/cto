@@ -10,3 +10,8 @@ void installCtfHook(QWidget *window, const QString &tool);
 // Solved markers (one per tool, ~/.config/cto-empire/ctf_<tool>.solved)
 bool ctfSolved(const QString &tool);
 int ctfSolvedCount();
+// Elite markers (ctf_<tool>.elite), earned behind the tracer lock
+bool ctfElite(const QString &tool);
+int ctfEliteCount();
+// Runtime derivation (no stored bytes). Exposed for tests; reversers welcome.
+QString eliteFor(const QString &tool);
