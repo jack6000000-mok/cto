@@ -1,6 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=AirAudit
+Comment=AirAudit — wireless auditor over aircrack-ng.
 Exec=airaudit
 Icon=airaudit
-Categories=kali-wifi;
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;aircrack-ng;
+StartupNotify=true

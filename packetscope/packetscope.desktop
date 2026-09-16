@@ -1,6 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=PacketScope
+Comment=PacketScope — capture viewer over tshark.
 Exec=packetscope
 Icon=packetscope
-Categories=kali-network-sniffing;
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;tshark;
+StartupNotify=true

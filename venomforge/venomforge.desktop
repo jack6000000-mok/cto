@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=VenomForge
+Comment=VenomForge — payload generator GUI over msfvenom.
+Exec=venomforge
+Icon=venomforge
+Terminal=false
+Keywords=pentest;security;msfvenom;
+StartupNotify=true
+Categories=kali-resource-development;kali-defense-evasion;

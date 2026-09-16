@@ -1,6 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=VulnLaunch
+Comment=VulnLaunch — vulnerable-lab VM launcher over virsh.
 Exec=vulnlaunch
 Icon=vulnlaunch
-Categories=kali-laboratories;
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;virsh;
+StartupNotify=true

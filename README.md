@@ -14,6 +14,7 @@
 | `hashbench/` | v0.1.0 | Hash auditor + benchmarks over hashcat |
 | `airaudit/` | v0.1.0 | Wireless auditor over aircrack-ng |
 | `vulnlaunch/` | v0.1.0 | Vulnerable-lab VM launcher over virsh |
+| `venomforge/` | v0.1.0 | Payload generator GUI over msfvenom (lab use only) |
 | `scaffold/` | — | Fleet generator: `python3 scaffold/scaffold.py` stamps new tools |
 
 ## Install (Kali/Debian)

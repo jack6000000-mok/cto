@@ -1,6 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=WebAudit
+Comment=WebAudit — web server scanner over nikto.
 Exec=webaudit
 Icon=webaudit
-Categories=kali-web-scanning;kali-vulnerability-scanning;
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;nikto;
+StartupNotify=true
