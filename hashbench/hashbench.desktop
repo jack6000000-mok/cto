@@ -1,10 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=HashBench
-Comment=HashBench — hash auditor + benchmarks over hashcat.
 Exec=hashbench
 Icon=hashbench
-Terminal=false
-Keywords=pentest;security;hashcat;
-StartupNotify=true
 Categories=kali-password-cracking;

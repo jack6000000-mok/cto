@@ -1,10 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=InjectProbe
-Comment=InjectProbe — injection tester over sqlmap.
 Exec=injectprobe
 Icon=injectprobe
-Terminal=false
-Keywords=pentest;security;sqlmap;
-StartupNotify=true
 Categories=kali-databases;

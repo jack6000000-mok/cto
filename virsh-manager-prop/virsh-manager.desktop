@@ -1,10 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=VirshManager
-Comment=Proprietary Qt GUI for libvirt VMs (start/stop/refresh)
 Exec=virsh-manager
 Icon=virsh-manager
-Terminal=false
-Keywords=virt;libvirt;virsh;vm;qemu;kvm;
-StartupNotify=true
 Categories=kali-services-and-other-tools;
