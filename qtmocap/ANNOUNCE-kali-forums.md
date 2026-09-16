@@ -11,7 +11,8 @@ No cloud, no accounts, MIT licensed.
 - 📷 Snap to PNG, ⏺ record to MJPEG AVI, camera switcher
 
 ## Stack
-Qt6 Widgets + OpenCV 4 (HOG + DNN), C++17. Tested on Kali rolling.
+Qt6 Widgets + OpenCV 4 (HOG + DNN), C++17. Tested on Kali rolling
+running bare-metal on a Chromebook (Google Lillipup) — yes, really.
 
 ## Install
 ```bash
