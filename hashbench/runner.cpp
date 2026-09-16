@@ -11,7 +11,7 @@ static const char *kBackend = "hashcat";
 static const char *kDesc = "HashBench — hash auditor + benchmarks over hashcat.";
 
 HashBench::HashBench(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("HashBench [Proprietary] — v0.1.0");
+    setWindowTitle("HashBench [Proprietary] — v0.2.0");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #ff0040;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("HashBench v0.1.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("HashBench v0.2.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void HashBench::onDone(int code) {
 
 void HashBench::showAbout() {
     QMessageBox::about(this, "About HashBench",
-        "HashBench v0.1.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "HashBench v0.2.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over hashcat (theirs). Qt toolkit remains under\n"
         "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
 }
