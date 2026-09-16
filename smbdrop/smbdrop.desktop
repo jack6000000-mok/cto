@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=SmbDrop
+Exec=smbdrop
+Icon=smbdrop
+Categories=kali-exfiltration;

@@ -15,6 +15,7 @@
 | `airaudit/` | v0.2.1 | Wireless auditor over aircrack-ng |
 | `vulnlaunch/` | v0.2.1 | Vulnerable-lab VM launcher over virsh |
 | `venomforge/` | v0.2.1 | Payload generator GUI over msfvenom (lab use only) |
+| `smbdrop/` | v0.1.0 | SMB share dropper GUI over impacket smbserver (lab use only) |
 | `licensing/` | v1.1.0 (no trial) | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
 | `scaffold/` | — | Fleet generator: `python3 scaffold/scaffold.py` stamps new tools |
 
