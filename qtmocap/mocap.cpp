@@ -67,10 +67,17 @@ void CapThread::run() {
             continue;
         }
         cv::flip(frm, frm, 1); // selfie mirror
-        // detect every 3rd frame @320px, hold boxes between
+        // detect every 3rd frame @320px, hold boxes between.
+        // Backlight-proofed: equalized luma + dense scan + low thresholds.
         if (n % 3 == 0) {
             cv::resize(frm, small, cv::Size(320, 240));
-            hog.detectMultiScale(small, found, 0, cv::Size(8, 8), cv::Size(0, 0), 1.05, 2);
+            cv::Mat ycc, eq[3];
+            cv::cvtColor(small, ycc, cv::COLOR_BGR2YCrCb);
+            cv::split(ycc, eq);
+            cv::equalizeHist(eq[0], eq[0]);
+            cv::merge(eq, 3, ycc);
+            cv::cvtColor(ycc, small, cv::COLOR_YCrCb2BGR);
+            hog.detectMultiScale(small, found, -0.2, cv::Size(4, 4), cv::Size(0, 0), 1.03, 1);
             kept.clear();
             for (auto r : found) // scale back x2
                 kept.emplace_back(r.x * 2, r.y * 2, r.width * 2, r.height * 2);
@@ -181,7 +188,7 @@ void SkelThread::run() {
 }
 
 MoCap::MoCap(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("QtMoCap [private] — v0.1.0");
+    setWindowTitle("QtMoCap [private] — v0.1.1");
     resize(700, 600);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #00ff88;border-radius:8px;padding:10px;background:#111927;}"
