@@ -89,26 +89,23 @@ bool License::trialValid(const QString &tool, int trialDays) {
 }
 
 bool ensureLicensed(const QString &tool, const QString &appName, const QString &buyUrl) {
+    // No trial. Valid $6 key or quit. Legacy .trial files are inert.
     if (License::isValid(tool, License::readKey(tool))) return true;
-    if (!License::trialValid(tool)) {
-        QMessageBox::warning(nullptr, appName, "Trial expired. Enter a $6 license key to continue.");
-    }
     QDialog dlg;
     dlg.setWindowTitle(appName + " — License ($6)");
     dlg.resize(420, 220);
     auto *lay = new QVBoxLayout(&dlg);
     auto *info = new QLabel(QString(
         "<b>%1</b> is proprietary ($6).<br>"
-        "Enter your key, start a free 7-day trial, or get a key.").arg(appName));
+        "Enter your key, or get one. No trial.").arg(appName));
     info->setWordWrap(true);
     auto *edit = new QLineEdit();
     edit->setPlaceholderText("XXXX-XXXX-XXXX-XXXX");
     auto *row = new QHBoxLayout();
     auto *bGo = new QPushButton("Activate");
-    auto *bTrial = new QPushButton("7-day trial");
     auto *bBuy = new QPushButton("Get key ($6)");
     auto *bQuit = new QPushButton("Quit");
-    row->addWidget(bGo); row->addWidget(bTrial); row->addWidget(bBuy); row->addWidget(bQuit);
+    row->addWidget(bGo); row->addWidget(bBuy); row->addWidget(bQuit);
     lay->addWidget(info); lay->addWidget(edit); lay->addLayout(row);
     bool done = false;
     QObject::connect(bGo, &QPushButton::clicked, [&] {
@@ -119,14 +116,6 @@ bool ensureLicensed(const QString &tool, const QString &appName, const QString &
         } else {
             QMessageBox::warning(&dlg, appName, "Invalid key for this tool.");
         }
-    });
-    QObject::connect(bTrial, &QPushButton::clicked, [&] {
-        License::markTrialStart(tool);
-        if (!License::trialValid(tool)) {
-            QMessageBox::warning(&dlg, appName, "Trial already used/expired.");
-            return;
-        }
-        done = true; dlg.accept();
     });
     QObject::connect(bBuy, &QPushButton::clicked, [&] {
         QDesktopServices::openUrl(QUrl(buyUrl));

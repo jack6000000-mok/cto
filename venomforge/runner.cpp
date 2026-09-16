@@ -11,7 +11,7 @@ static const char *kBackend = "msfvenom";
 static const char *kDesc = "VenomForge — payload generator GUI over msfvenom.";
 
 VenomForge::VenomForge(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("VenomForge [Proprietary] — v0.2.0");
+    setWindowTitle("VenomForge [Proprietary] — v0.2.1");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #ff0040;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("VenomForge v0.2.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("VenomForge v0.2.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void VenomForge::onDone(int code) {
 
 void VenomForge::showAbout() {
     QMessageBox::about(this, "About VenomForge",
-        "VenomForge v0.2.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "VenomForge v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over msfvenom (theirs). Qt toolkit remains under\n"
         "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
 }

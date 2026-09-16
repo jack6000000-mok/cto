@@ -1,6 +1,6 @@
-# cto-licensing v1.0.0 — shared $6 gate (source lib)
+# cto-licensing v1.1.0 — shared $6 gate (source lib)
 
-HMAC-SHA256 keys + 7-day trial + Qt gate dialog. Drop into any Qt app:
+HMAC-SHA256 keys, no trial. Drop into any Qt app:
 
 ```cmake
 target_sources(myapp PRIVATE ../licensing/license.cpp ../licensing/license.h)

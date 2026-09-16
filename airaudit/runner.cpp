@@ -11,7 +11,7 @@ static const char *kBackend = "aircrack-ng";
 static const char *kDesc = "AirAudit — wireless auditor over aircrack-ng.";
 
 AirAudit::AirAudit(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("AirAudit [Proprietary] — v0.2.0");
+    setWindowTitle("AirAudit [Proprietary] — v0.2.1");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #00aaff;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("AirAudit v0.2.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("AirAudit v0.2.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void AirAudit::onDone(int code) {
 
 void AirAudit::showAbout() {
     QMessageBox::about(this, "About AirAudit",
-        "AirAudit v0.2.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "AirAudit v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over aircrack-ng (theirs). Qt toolkit remains under\n"
         "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
 }

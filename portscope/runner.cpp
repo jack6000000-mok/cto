@@ -11,7 +11,7 @@ static const char *kBackend = "nmap";
 static const char *kDesc = "PortScope — scan profiler + history over nmap.";
 
 PortScope::PortScope(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("PortScope [Proprietary] — v0.2.0");
+    setWindowTitle("PortScope [Proprietary] — v0.2.1");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #00ff88;border-radius:8px;padding:10px;background:#111927;}"
@@ -43,7 +43,7 @@ PortScope::PortScope(QWidget *parent) : QMainWindow(parent) {
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("PortScope v0.2.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("PortScope v0.2.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -75,7 +75,7 @@ void PortScope::onDone(int code) {
 
 void PortScope::showAbout() {
     QMessageBox::about(this, "About PortScope",
-        "PortScope v0.2.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "PortScope v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over nmap (theirs). Qt toolkit remains under\n"
         "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
 }

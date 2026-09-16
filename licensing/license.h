@@ -1,5 +1,5 @@
 #pragma once
-// CTO Empire licensing — $6/tool. HMAC-SHA256 keys + 7-day trial.
+// CTO Empire licensing — $6/tool. HMAC-SHA256 keys, no trial.
 // Honest limits: offline check, secret is obfuscated in-binary, clock is
 // local. Stops casual sharing, not determined reversers. Real armor =
 // Ed25519 + server activation (v2 roadmap).
@@ -16,7 +16,7 @@ public:
     static void writeKey(const QString &tool, const QString &key);
 };
 
-// Blocking gate. Returns true if licensed or trial started/valid.
-// Shows Activate / Trial / Buy($6) / Quit dialog otherwise.
+// Blocking gate. Returns true only for a valid stored/entered key.
+// Shows Activate / Buy($6) / Quit dialog otherwise. No trial.
 bool ensureLicensed(const QString &tool, const QString &appName,
                     const QString &buyUrl);

@@ -11,7 +11,7 @@ static const char *kBackend = "tshark";
 static const char *kDesc = "PacketScope — capture viewer over tshark.";
 
 PacketScope::PacketScope(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("PacketScope [Proprietary] — v0.2.0");
+    setWindowTitle("PacketScope [Proprietary] — v0.2.1");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #00ffee;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("PacketScope v0.2.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("PacketScope v0.2.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void PacketScope::onDone(int code) {
 
 void PacketScope::showAbout() {
     QMessageBox::about(this, "About PacketScope",
-        "PacketScope v0.2.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "PacketScope v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over tshark (theirs). Qt toolkit remains under\n"
         "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
 }

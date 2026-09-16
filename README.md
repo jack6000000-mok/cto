@@ -3,19 +3,19 @@
 
 | Tool | Version | What |
 |---|---|---|
-| `qt-pentest-game-cpp/` | v1.2.0 | **PENTEST // GLITCH PROTOCOL** — 15-min pentest drill quiz. Wrong answers trigger 3D glitch punishment (tearing, RGB split, window shake). About panel with live Tor + i2pd status probes. Ships `.deb` + Windows CI (`.zip` + NSIS setup) |
+| `qt-pentest-game-cpp/` | v1.3.1 | **PENTEST // GLITCH PROTOCOL** — 15-min pentest drill quiz. Wrong answers trigger 3D glitch punishment (tearing, RGB split, window shake). About panel with live Tor + i2pd status probes. Ships `.deb` + Windows CI (`.zip` + NSIS setup) |
 | `qt-pentest-game/` | v1.0 | Original Python/PySide6 prototype of the glitch game |
-| `virsh-manager-prop/` | v0.2.0 | Thin Qt GUI over `virsh`/libvirt: VM list, start / shutdown / force-off, live log console. Ships `.deb` |
-| `portscope/` | v0.2.0 | Scan profiler + history over nmap |
-| `packetscope/` | v0.2.0 | Capture viewer over tshark |
-| `webaudit/` | v0.2.0 | Web server scanner over nikto |
-| `injectprobe/` | v0.2.0 | Injection tester over sqlmap (lab targets only) |
-| `credaudit/` | v0.2.0 | Credential auditor over hydra (lab only) |
-| `hashbench/` | v0.2.0 | Hash auditor + benchmarks over hashcat |
-| `airaudit/` | v0.2.0 | Wireless auditor over aircrack-ng |
-| `vulnlaunch/` | v0.2.0 | Vulnerable-lab VM launcher over virsh |
-| `venomforge/` | v0.2.0 | Payload generator GUI over msfvenom (lab use only) |
-| `licensing/` | v1.0.0 | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
+| `virsh-manager-prop/` | v0.2.1 | Thin Qt GUI over `virsh`/libvirt: VM list, start / shutdown / force-off, live log console. Ships `.deb` |
+| `portscope/` | v0.2.1 | Scan profiler + history over nmap |
+| `packetscope/` | v0.2.1 | Capture viewer over tshark |
+| `webaudit/` | v0.2.1 | Web server scanner over nikto |
+| `injectprobe/` | v0.2.1 | Injection tester over sqlmap (lab targets only) |
+| `credaudit/` | v0.2.1 | Credential auditor over hydra (lab only) |
+| `hashbench/` | v0.2.1 | Hash auditor + benchmarks over hashcat |
+| `airaudit/` | v0.2.1 | Wireless auditor over aircrack-ng |
+| `vulnlaunch/` | v0.2.1 | Vulnerable-lab VM launcher over virsh |
+| `venomforge/` | v0.2.1 | Payload generator GUI over msfvenom (lab use only) |
+| `licensing/` | v1.1.0 (no trial) | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
 | `scaffold/` | — | Fleet generator: `python3 scaffold/scaffold.py` stamps new tools |
 
 ## Install (Kali/Debian)
