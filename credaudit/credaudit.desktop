@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=CredAudit
+Comment=CredAudit — credential auditor over hydra.
+Exec=credaudit
+Icon=credaudit
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;hydra;
+StartupNotify=true

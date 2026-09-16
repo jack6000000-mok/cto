@@ -1,0 +1,16 @@
+VULNLAUNCH PROPRIETARY LICENSE (v1.0)
+
+Copyright (c) 2026 oday. All Rights Reserved.
+
+1. GRANT. Non-exclusive, non-transferable license to install and use
+   one copy of VulnLaunch ("Software") on a single device.
+2. RESTRICTIONS. No copy, redistribution, sublicense, rent, lease,
+   lend, or reverse-engineering (except where prohibited by law).
+   No removal of proprietary notices.
+3. OWNERSHIP. Licensed, not sold. All rights remain with licensor.
+4. THIRD-PARTY COMPONENTS. Backend tool (virsh) and the Qt
+   toolkit keep their own licenses (Qt: GNU (L)GPL, The Qt Company).
+   Qt source: https://www.qt.io.
+5. NO WARRANTY. Provided "AS IS". 6. TERMINATION on breach.
+
+Contact: oday@local

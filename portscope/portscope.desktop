@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=PortScope
+Comment=PortScope — scan profiler + history over nmap.
+Exec=portscope
+Icon=portscope
+Terminal=false
+Categories=System;Security;
+Keywords=pentest;security;nmap;
+StartupNotify=true
