@@ -97,7 +97,9 @@ bool ensureLicensed(const QString &tool, const QString &appName, const QString &
     auto *lay = new QVBoxLayout(&dlg);
     auto *info = new QLabel(QString(
         "<b>%1</b> is proprietary ($6).<br>"
-        "Enter your key, or get one. No trial.").arg(appName));
+        "Enter your key, or get one. No trial.<br>"
+        "<font color=\"#ff5577\">Copying or sending this software to others is "
+        "prohibited. Violations result in copyright DMCA takedowns.</font>").arg(appName));
     info->setWordWrap(true);
     auto *edit = new QLineEdit();
     edit->setPlaceholderText("XXXX-XXXX-XXXX-XXXX");

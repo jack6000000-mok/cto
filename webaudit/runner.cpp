@@ -11,7 +11,7 @@ static const char *kBackend = "nikto";
 static const char *kDesc = "WebAudit — web server scanner over nikto.";
 
 WebAudit::WebAudit(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("WebAudit [Proprietary] — v0.2.1");
+    setWindowTitle("WebAudit [Proprietary] — v0.2.2");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #7a00ff;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("WebAudit v0.2.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("WebAudit v0.2.2 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void WebAudit::onDone(int code) {
 
 void WebAudit::showAbout() {
     QMessageBox::about(this, "About WebAudit",
-        "WebAudit v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "WebAudit v0.2.2 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over nikto (theirs). Qt toolkit remains under\n"
-        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
+        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.\n\nCopying or sending this Software is prohibited and will result in DMCA takedowns.");
 }

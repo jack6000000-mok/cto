@@ -3,21 +3,21 @@
 
 | Tool | Version | What |
 |---|---|---|
-| `qt-pentest-game-cpp/` | v1.3.1 | **PENTEST // GLITCH PROTOCOL** — 15-min pentest drill quiz. Wrong answers trigger 3D glitch punishment (tearing, RGB split, window shake). About panel with live Tor + i2pd status probes. Ships `.deb` + Windows CI (`.zip` + NSIS setup) |
+| `qt-pentest-game-cpp/` | v1.3.2 | **PENTEST // GLITCH PROTOCOL** — 15-min pentest drill quiz. Wrong answers trigger 3D glitch punishment (tearing, RGB split, window shake). About panel with live Tor + i2pd status probes. Ships `.deb` + Windows CI (`.zip` + NSIS setup) |
 | `qt-pentest-game/` | v1.0 | Original Python/PySide6 prototype of the glitch game |
-| `virsh-manager-prop/` | v0.2.1 | Thin Qt GUI over `virsh`/libvirt: VM list, start / shutdown / force-off, live log console. Ships `.deb` |
-| `portscope/` | v0.2.1 | Scan profiler + history over nmap |
-| `packetscope/` | v0.2.1 | Capture viewer over tshark |
-| `webaudit/` | v0.2.1 | Web server scanner over nikto |
-| `injectprobe/` | v0.2.1 | Injection tester over sqlmap (lab targets only) |
-| `credaudit/` | v0.2.1 | Credential auditor over hydra (lab only) |
-| `hashbench/` | v0.2.1 | Hash auditor + benchmarks over hashcat |
-| `airaudit/` | v0.2.1 | Wireless auditor over aircrack-ng |
-| `vulnlaunch/` | v0.2.1 | Vulnerable-lab VM launcher over virsh |
-| `venomforge/` | v0.2.1 | Payload generator GUI over msfvenom (lab use only) |
-| `smbdrop/` | v0.1.0 | SMB share dropper GUI over impacket smbserver (lab use only) |
-| `keymanager/` | v0.1.0 | Read-only auth key viewer — fingerprints only, never secrets |
-| `licensing/` | v1.1.0 (no trial) | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
+| `virsh-manager-prop/` | v0.2.2 | Thin Qt GUI over `virsh`/libvirt: VM list, start / shutdown / force-off, live log console. Ships `.deb` |
+| `portscope/` | v0.2.2 | Scan profiler + history over nmap |
+| `packetscope/` | v0.2.2 | Capture viewer over tshark |
+| `webaudit/` | v0.2.2 | Web server scanner over nikto |
+| `injectprobe/` | v0.2.2 | Injection tester over sqlmap (lab targets only) |
+| `credaudit/` | v0.2.2 | Credential auditor over hydra (lab only) |
+| `hashbench/` | v0.2.2 | Hash auditor + benchmarks over hashcat |
+| `airaudit/` | v0.2.2 | Wireless auditor over aircrack-ng |
+| `vulnlaunch/` | v0.2.2 | Vulnerable-lab VM launcher over virsh |
+| `venomforge/` | v0.2.2 | Payload generator GUI over msfvenom (lab use only) |
+| `smbdrop/` | v0.1.1 | SMB share dropper GUI over impacket smbserver (lab use only) |
+| `keymanager/` | v0.1.1 | Read-only auth key viewer — fingerprints only, never secrets |
+| `licensing/` | v1.2.0 (no trial) | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
 | `scaffold/` | — | Fleet generator: `python3 scaffold/scaffold.py` stamps new tools |
 
 ## Install (Kali/Debian)

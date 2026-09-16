@@ -8,7 +8,7 @@
 #include <QDateTime>
 
 VirshManager::VirshManager(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("VirshManager [Proprietary] — v0.2.1");
+    setWindowTitle("VirshManager [Proprietary] — v0.2.2");
     resize(860, 600);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #00ff88;border-radius:8px;padding:10px;background:#111927;}"
@@ -51,7 +51,7 @@ VirshManager::VirshManager(QWidget *parent) : QMainWindow(parent) {
 
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append("VirshManager v0.2.1 — proprietary. Uses system virsh; Qt under LGPL.");
+    m_log->append("VirshManager v0.2.2 — proprietary. Uses system virsh; Qt under LGPL.");
     lay->addWidget(m_log, 1);
 
     refresh();
@@ -116,7 +116,8 @@ void VirshManager::destroyVm() {
 
 void VirshManager::showAbout() {
     QMessageBox::about(this, "About VirshManager",
-        "VirshManager v0.2.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "VirshManager v0.2.2 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over system virsh/libvirt. Qt toolkit remains under\n"
-        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
+        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.\n\n"
+        "Copying or sending this Software is prohibited and will result in DMCA takedowns.");
 }

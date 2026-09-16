@@ -11,7 +11,7 @@ static const char *kBackend = "ssh-keygen";
 static const char *kDesc = "KeyManager — read-only auth key viewer (fingerprints only, never secrets).";
 
 KeyManager::KeyManager(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("KeyManager [Proprietary] — v0.1.0");
+    setWindowTitle("KeyManager [Proprietary] — v0.1.1");
     resize(820, 560);
     setStyleSheet("QMainWindow{background:#0a0e14;} QWidget{background:#0a0e14;color:#c8e6c9;}"
                   "QPushButton{border:2px solid #ffdd57;border-radius:8px;padding:10px;background:#111927;}"
@@ -47,7 +47,7 @@ lay->addWidget(warn);
     lay->addLayout(row);
     m_log = new QTextEdit();
     m_log->setReadOnly(true);
-    m_log->append(QString("KeyManager v0.1.0 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
+    m_log->append(QString("KeyManager v0.1.1 — proprietary GUI. Backend: %1 (theirs).").arg(kBackend));
     lay->addWidget(m_log, 1);
 }
 
@@ -79,7 +79,7 @@ void KeyManager::onDone(int code) {
 
 void KeyManager::showAbout() {
     QMessageBox::about(this, "About KeyManager",
-        "KeyManager v0.1.0 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
+        "KeyManager v0.1.1 — © 2026 oday, All Rights Reserved (Proprietary).\n\n"
         "Thin Qt GUI over ssh-keygen (theirs). Qt toolkit remains under\n"
-        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.");
+        "GNU (L)GPL by The Qt Company Ltd. See qt.io/licensing.\n\nCopying or sending this Software is prohibited and will result in DMCA takedowns.");
 }
