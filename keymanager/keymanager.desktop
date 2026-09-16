@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=KeyManager
+Exec=keymanager
+Icon=keymanager
+Categories=kali-credential-access;

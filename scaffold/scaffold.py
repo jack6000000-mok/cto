@@ -42,6 +42,10 @@ TOOLS = [
       color="#00ff88", desc="SmbDrop — SMB share dropper GUI over impacket smbserver.",
       args="/usr/share/doc/python3-impacket/examples/smbserver.py -smb2support PubShare /tmp/smbshare", target="",
       warn="LAB USE ONLY. Hostile shares outside authorized tests are illegal."),
+ dict(d="keymanager", cls="KeyManager", exe="keymanager", backend="ssh-keygen",
+      color="#ffdd57", desc="KeyManager — read-only auth key viewer (fingerprints only, never secrets).",
+      args="-l -f ~/.ssh/cto_github_rsa.pub", target="",
+      warn="READ-ONLY. Displays public fingerprints only. Private keys never leave disk."),
 ]
 
 HEADER = "// Copyright (c) 2026 oday. All Rights Reserved.\n// Proprietary License, see LICENSE file.\n// Qt toolkit components remain under GNU (L)GPL by The Qt Company Ltd.\n"
