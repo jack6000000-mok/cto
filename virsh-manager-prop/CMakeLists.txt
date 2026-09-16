@@ -14,3 +14,6 @@ add_executable(virsh-manager WIN32
 )
 
 target_link_libraries(virsh-manager PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
+
+target_sources(virsh-manager PRIVATE ../licensing/license.cpp ../licensing/license.h)
+target_include_directories(virsh-manager PRIVATE ../licensing)

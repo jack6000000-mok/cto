@@ -3,8 +3,11 @@
 // Qt toolkit components remain under GNU (L)GPL by The Qt Company Ltd.
 #include <QApplication>
 #include "runner.h"
+#include "license.h"
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
+    if (!ensureLicensed("packetscope", "PacketScope", "https://github.com/jack6000000-mok/cto"))
+        return 0;
     PacketScope w;
     w.show();
     return app.exec();

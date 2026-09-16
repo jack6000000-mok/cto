@@ -6,3 +6,6 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Gui Core)
 add_executable(injectprobe WIN32 main.cpp runner.cpp runner.h)
 target_link_libraries(injectprobe PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
+
+target_sources(injectprobe PRIVATE ../licensing/license.cpp ../licensing/license.h)
+target_include_directories(injectprobe PRIVATE ../licensing)
