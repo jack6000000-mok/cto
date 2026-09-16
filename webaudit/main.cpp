@@ -4,11 +4,13 @@
 #include <QApplication>
 #include "runner.h"
 #include "license.h"
+#include "ctf.h"
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     if (!ensureLicensed("webaudit", "WebAudit", "https://github.com/jack6000000-mok/cto"))
         return 0;
     WebAudit w;
+    installCtfHook(&w, "webaudit");
     w.show();
     return app.exec();
 }

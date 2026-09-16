@@ -9,3 +9,5 @@ target_link_libraries(airaudit PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(airaudit PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(airaudit PRIVATE ../licensing)
+
+target_sources(airaudit PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

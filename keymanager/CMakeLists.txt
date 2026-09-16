@@ -9,3 +9,5 @@ target_link_libraries(keymanager PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(keymanager PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(keymanager PRIVATE ../licensing)
+
+target_sources(keymanager PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

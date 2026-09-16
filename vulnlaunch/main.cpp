@@ -4,11 +4,13 @@
 #include <QApplication>
 #include "runner.h"
 #include "license.h"
+#include "ctf.h"
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     if (!ensureLicensed("vulnlaunch", "VulnLaunch", "https://github.com/jack6000000-mok/cto"))
         return 0;
     VulnLaunch w;
+    installCtfHook(&w, "vulnlaunch");
     w.show();
     return app.exec();
 }

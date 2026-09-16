@@ -9,3 +9,5 @@ target_link_libraries(vulnlaunch PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(vulnlaunch PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(vulnlaunch PRIVATE ../licensing)
+
+target_sources(vulnlaunch PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

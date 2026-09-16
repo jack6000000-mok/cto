@@ -4,11 +4,13 @@
 #include <QApplication>
 #include "runner.h"
 #include "license.h"
+#include "ctf.h"
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     if (!ensureLicensed("portscope", "PortScope", "https://github.com/jack6000000-mok/cto"))
         return 0;
     PortScope w;
+    installCtfHook(&w, "portscope");
     w.show();
     return app.exec();
 }

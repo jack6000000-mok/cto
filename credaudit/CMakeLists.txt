@@ -9,3 +9,5 @@ target_link_libraries(credaudit PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(credaudit PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(credaudit PRIVATE ../licensing)
+
+target_sources(credaudit PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

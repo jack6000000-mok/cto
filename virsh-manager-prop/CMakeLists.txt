@@ -17,3 +17,5 @@ target_link_libraries(virsh-manager PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(virsh-manager PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(virsh-manager PRIVATE ../licensing)
+
+target_sources(virsh-manager PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

@@ -9,3 +9,5 @@ target_link_libraries(hashbench PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(hashbench PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(hashbench PRIVATE ../licensing)
+
+target_sources(hashbench PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

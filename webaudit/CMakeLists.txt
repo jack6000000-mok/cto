@@ -9,3 +9,5 @@ target_link_libraries(webaudit PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(webaudit PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(webaudit PRIVATE ../licensing)
+
+target_sources(webaudit PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

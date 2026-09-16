@@ -9,3 +9,5 @@ target_link_libraries(smbdrop PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(smbdrop PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(smbdrop PRIVATE ../licensing)
+
+target_sources(smbdrop PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)

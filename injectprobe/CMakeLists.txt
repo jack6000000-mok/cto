@@ -9,3 +9,5 @@ target_link_libraries(injectprobe PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core)
 
 target_sources(injectprobe PRIVATE ../licensing/license.cpp ../licensing/license.h)
 target_include_directories(injectprobe PRIVATE ../licensing)
+
+target_sources(injectprobe PRIVATE ../licensing/ctf.cpp ../licensing/ctf.h)
