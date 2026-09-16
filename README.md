@@ -17,7 +17,7 @@
 | `venomforge/` | v0.2.2 | Payload generator GUI over msfvenom (lab use only) |
 | `smbdrop/` | v0.1.1 | SMB share dropper GUI over impacket smbserver (lab use only) |
 | `keymanager/` | v0.1.1 | Read-only auth key viewer — fingerprints only, never secrets |
-| `qtmocap/` | v0.1.0 | Private mocap: webcam HOG people boxes, snap + record (MIT, needs OpenCV) |
+| `qtmocap/` | v0.1.0 | Private mocap: webcam HOG people boxes + async COCO skeleton, snap + record (MIT, needs OpenCV + 200M model, see folder) |
 | `licensing/` | v1.2.0 (no trial) | Shared $6 gate: HMAC keys, trial, dialog, keygen (`cto-licensing` deb) |
 | `scaffold/` | — | Fleet generator: `python3 scaffold/scaffold.py` stamps new tools |
 
